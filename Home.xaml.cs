@@ -50,7 +50,8 @@ namespace Project_Library_Management_FA23_BL5
 
         private void managerBook_Click(object sender, RoutedEventArgs e)
         {
-
+            BookManager b = new BookManager();
+            frameHome.Content = b;
         }
 
         private void namagerReader_Click(object sender, RoutedEventArgs e)
