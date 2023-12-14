@@ -5,10 +5,41 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project_Library_Management_FA23_BL5"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ReturnBook">
+      d:DesignHeight="450"
+      Title="ReturnBook" Width="1052">
 
     <Grid Background="White">
-        
+        <WrapPanel>
+            <StackPanel Height="70" Width="247">
+                <Button Content="Return" Margin="0 13 0 0" Width="133"/>
+                <Button Content="Refresh" Margin="0 8 0 0" Width="133"/>
+            </StackPanel>
+            <StackPanel Width="533">
+                <StackPanel Height="36" Width="508" Orientation="Horizontal">
+                    <RadioButton Content="By reader name" Margin="0 7 0 0"/>
+                    <RadioButton Content="By lend ticket ID" Margin="20 7 0 0"/>
+                </StackPanel>
+                <StackPanel Height="34" Orientation="Horizontal">
+                    <Button Content="Search" Margin="13 0 30 0" Width="89" Height="23"/>
+                    <TextBox TextWrapping="Wrap" Width="315" Height="22"/>
+                </StackPanel>
+            </StackPanel>
+
+            <ListView Height="365" Width="1032" x:Name="lv_ReturnBook">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Book Id" Width="60" DisplayMemberBinding="{Binding Path=BookId}"/>
+                        <GridViewColumn Header="Ticket Id" Width="60" DisplayMemberBinding="{Binding Path=ReturnId}"/>
+                        <GridViewColumn Header="Rearder card" Width="100" DisplayMemberBinding="{Binding Path=CardNumber}"/>
+                        <GridViewColumn Header="Reader name" Width="200" DisplayMemberBinding="{Binding Path=FullName}"/>
+                        <GridViewColumn Header="Librarian Id" Width="90" DisplayMemberBinding="{Binding Path=LibrarianId}"/>
+                        <GridViewColumn Header="Lend date" Width="190" DisplayMemberBinding="{Binding Path=LendDate}"/>
+                        <GridViewColumn Header="Expected return date" Width="190" DisplayMemberBinding="{Binding Path=ExpectedReturnDate}"/>
+                        <GridViewColumn Header="Lend condition" Width="135" DisplayMemberBinding="{Binding Path=ReturnCondition}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </WrapPanel>
+
     </Grid>
 </Page>

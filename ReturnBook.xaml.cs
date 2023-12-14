@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_Library_Management_FA23_BL5.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,27 @@ namespace Project_Library_Management_FA23_BL5
         public ReturnBook()
         {
             InitializeComponent();
+            Load();
+        }
+        public void Load()
+        {
+            try
+            {
+                using (var context = new LibraryManagementContext())
+                {
+                    var data = context.ReturnBooks.ToList();
+                    lv_ReturnBook.ItemsSource = data;
+                }
+                using (var context = new LibraryManagementContext())
+                {
+                    var data = context.Readers.ToList();
+                    lv_ReturnBook.ItemsSource = data;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
