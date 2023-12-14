@@ -1,0 +1,24 @@
+﻿<Window x:Class="Project_Library_Management_FA23_BL5.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Library_Management_FA23_BL5"
+        mc:Ignorable="d"
+        Title="Home management" Height="534" Width="1054">
+    <Grid>
+        <Grid>
+            <StackPanel Margin="0,0,909,0">
+                <Button Content="Manager book" Margin="0 50 0 0" Height="45" Width="130" FontWeight="Bold" x:Name="managerBook" Click="managerBook_Click"/>
+                <Button Content="Manager reader" Margin="0 25 0 0" Height="45" Width="130" FontWeight="Bold" x:Name="namagerReader" Click="namagerReader_Click"/>
+                <Button Content="Manager lend book" Margin="0 25 0 0" Height="45" Width="130" FontWeight="Bold" x:Name="managerLendBook" Click="managerLendBook_Click"/>
+                <Button Content="Manager return book" Margin="0 25 0 0" Height="45" Width="130" FontWeight="Bold" x:Name="managerReturnBook" Click="managerReturnBook_Click"/>
+                <Button Content="Manager Account" Margin="0 25 0 0" Height="45" Width="130" FontWeight="Bold" x:Name="managerAccount" Click="managerAccount_Click"/>
+                <Button Content="Logout" Margin="0 70 50 0" Width="70" x:Name="logout" Click="logout_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid Margin="154,0,0,0">
+            <Frame x:Name="frameHome"/>
+        </Grid>
+    </Grid>
+</Window>
