@@ -1,0 +1,30 @@
+﻿<Window x:Class="Project_Library_Management_FA23_BL5.TitleCreate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Library_Management_FA23_BL5"
+        mc:Ignorable="d"
+        Title="TitleCreate" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Margin="0 10 0 20"  FontWeight="Light" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" >
+Title Control
+            </TextBlock>
+            <StackPanel Background="white" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+                <Label Content="Id" x:Name="labelId" Visibility="Collapsed" IsEnabled="False" />
+                <TextBox x:Name="txtId" Margin="0 0 0 5" Visibility="Collapsed" IsEnabled="False" />
+                <Label Content="Title" />
+                <TextBox x:Name="txtTitle" Margin="0 0 0 5" />
+                <Label Content="Number Of Page" />
+                <TextBox x:Name="txtNumberOfPage" Margin="0 0 0 5" PreviewTextInput="txtNumber_PreviewTextInput" PreviewKeyDown="txtNumber_PreviewKeyDown"/>
+                <Label Content="Author" />
+                <ComboBox x:Name="cbAuthor" Margin="0 0 0 5" DisplayMemberPath="AuthorName" SelectedValuePath="AuthorId"/>
+                <Label Content="Publisher" />
+                <ComboBox x:Name="cbPublisher" Margin="0 0 0 5" DisplayMemberPath="PublisherName" SelectedValuePath="PublisherId"/>
+
+                <Button x:Name="btn" Content="Create"  Width="100" Margin="0 10 0 5" Click="Button_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
