@@ -4,11 +4,53 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project_Library_Management_FA23_BL5"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="LendBook">
+      mc:Ignorable="d"
+      Title="LendBook" Height="439" Width="1104">
 
     <Grid Background="White">
-        
+        <ListView Margin="0,0,696,0" x:Name="lv_Reader">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Reader card number" Width="150" DisplayMemberBinding="{Binding Path=CardNumber}"/>
+                    <GridViewColumn Header="Reader name" Width="150" DisplayMemberBinding="{Binding Path=FullName}"/>
+                    <GridViewColumn Header="Occupation" Width="100" DisplayMemberBinding="{Binding Path=Occupation}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Margin="413,0,341,0" x:Name="lv_BookInfo">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title id" Width="100" DisplayMemberBinding="{Binding Path=TitleId}"/>
+                    
+                    <GridViewColumn Header="Book id" Width="100" DisplayMemberBinding="{Binding Path=BookId}"/>
+                    
+                    <GridViewColumn Header="Title" Width="100" DisplayMemberBinding="{Binding Path=Title}"/>
+                    <GridViewColumn Header="Author" Width="100" DisplayMemberBinding="{Binding Path=AuthorBooks}"/>
+                    <GridViewColumn Header="Publisher" Width="100" DisplayMemberBinding="{Binding Path=Publisher}"/>
+                    <GridViewColumn Header="Instock" Width="100" DisplayMemberBinding="{Binding Path=InStock}"/>
+                    <GridViewColumn Header="Number of page" Width="100" DisplayMemberBinding="{Binding Path=NumberOfPages}"/>
+                    <GridViewColumn Header="Condition" Width="100" DisplayMemberBinding="{Binding Path=Condition}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <WrapPanel Margin="768,0,0,0">
+            <StackPanel Height="65" Width="326" Orientation="Horizontal">
+                <Label Content="Book id" Width="85" Height="30"/>
+                <TextBox TextWrapping="Wrap" x:Name="txt_BookId" Width="233" Text="{Binding Path=BookId, Mode=OneWay}" DataContext="{Binding ElementName=listReader, Path=SelectedItem}" Height="29"/>
+            </StackPanel>
+            <StackPanel Width="326" Height="66" Orientation="Horizontal">
+                <Label Content="Reader id" Width="88" Height="30"/>
+                <TextBox TextWrapping="Wrap" x:Name="txt_ReaderId" Width="228" Text="{Binding Path=CardNumber, Mode=OneWay}" DataContext="{Binding ElementName=listReader, Path=SelectedItem}" Height="34"/>
+            </StackPanel>
+            <StackPanel Width="326" Height="57" Orientation="Horizontal">
+                <Label Content="Expected return book" Width="125" Height="31"/>
+                <DatePicker x:Name="expect" Width="190" Height="33"></DatePicker>
+            </StackPanel>
+            <StackPanel Width="326" Height="43" Orientation="Horizontal">
+                <Button Content="Create" x:Name="btn_CreateTicker" Click="btn_CreateTicker_Click" Width="80" Height="20" Margin="70 0 0 0"/>
+                <Button Content="Button"  Width="80" Height="20" Margin="30 0"/>
+            </StackPanel>
+        </WrapPanel>
+
     </Grid>
 </Page>
