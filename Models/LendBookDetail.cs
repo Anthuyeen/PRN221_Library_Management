@@ -23,5 +23,6 @@ public partial class LendBookDetail
 
     public virtual ICollection<Book> Books { get; set; } = new List<Book>();
 
+    
    
 }

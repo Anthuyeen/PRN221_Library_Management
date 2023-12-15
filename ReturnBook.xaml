@@ -14,7 +14,7 @@
 
             <StackPanel Height="70" Width="247">
                 <Button Content="Return" Margin="0 13 0 0" Width="133"/>
-                <Button Content="Refresh" Margin="0 8 0 0" Width="133"/>
+          
             </StackPanel>
             <!--<StackPanel Width="533">
                 <StackPanel Height="36" Width="508" Orientation="Horizontal">

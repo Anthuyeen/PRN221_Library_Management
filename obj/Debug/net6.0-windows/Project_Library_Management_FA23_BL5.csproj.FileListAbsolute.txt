@@ -77,9 +77,6 @@ E:\Semester\Semester7\PRN221_BL5\Project_Library_Management_FA23_BL5\Project_Lib
 E:\Semester\Semester7\PRN221_BL5\Project_Library_Management_FA23_BL5\Project_Library_Management_FA23_BL5\obj\Debug\net6.0-windows\AccountManager.baml
 E:\Semester\Semester7\PRN221_BL5\Project_Library_Management_FA23_BL5\Project_Library_Management_FA23_BL5\obj\Debug\net6.0-windows\AdminMemberCreate.g.cs
 E:\Semester\Semester7\PRN221_BL5\Project_Library_Management_FA23_BL5\Project_Library_Management_FA23_BL5\obj\Debug\net6.0-windows\AdminMemberCreate.baml
-D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.dll
-D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\refint\Project_Library_Management_FA23_BL5.dll
-D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.pdb
 D:\06_LibraryManagement_Project\PRN221_Library_Management\bin\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.exe
 D:\06_LibraryManagement_Project\PRN221_Library_Management\bin\Debug\net6.0-windows\appsettings.json
 D:\06_LibraryManagement_Project\PRN221_Library_Management\bin\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.deps.json
@@ -166,5 +163,8 @@ D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windo
 D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.AssemblyInfo.cs
 D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.csproj.CoreCompileInputs.cache
 D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.csproj.CopyComplete
+D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.dll
+D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\refint\Project_Library_Management_FA23_BL5.dll
+D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.pdb
 D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\Project_Library_Management_FA23_BL5.genruntimeconfig.cache
 D:\06_LibraryManagement_Project\PRN221_Library_Management\obj\Debug\net6.0-windows\ref\Project_Library_Management_FA23_BL5.dll

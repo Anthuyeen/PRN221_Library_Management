@@ -23,6 +23,7 @@ namespace Project_Library_Management_FA23_BL5
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static Librarian admin;
         public MainWindow()
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace Project_Library_Management_FA23_BL5
                 Librarian? librarian = LibrarianManager.GetLibrarian(login.LibrarianId);
                 if (librarian != null)
                 {
+                    admin = librarian;
                     Home home = new(login, librarian);
                     home.Show();
                     Hide();

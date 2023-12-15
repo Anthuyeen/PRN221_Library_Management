@@ -1,4 +1,5 @@
-﻿using Project_Library_Management_FA23_BL5.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Project_Library_Management_FA23_BL5.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Project_Library_Management_FA23_BL5.Models;
 namespace Project_Library_Management_FA23_BL5
 {
     /// <summary>
@@ -28,18 +29,33 @@ namespace Project_Library_Management_FA23_BL5
         }
         public void Load()
         {
+
             try
             {
                 using (var context = new LibraryManagementContext())
                 {
-                    var data = context.ReturnBooks.ToList();
-                    lv_ReturnBook.ItemsSource = data;
+                    var query = from r in context.ReturnBooks
+                                join lb in context.LendBookDetails on r.LibrarianId equals lb.LibrarianId
+                                join read in context.Readers on r.CardNumber equals read.CardNumber
+                                //join bid in context.Books on lb.LendBookDetailId equals bid.ReturnBookDetails
+                                select new
+                                {
+                                   // BookId = r.LibrarianName,
+                                    ReturnId = r.ReturnId,
+                                    CardNumber = r.CardNumber,
+                                    FullName = read.FullName,
+                                    LibrarianId = lb.LibrarianId,
+                                    LendDate = lb.LendDate,
+                                    ExpectedReturnDate = lb.ExpectedReturnDate,
+                                    ReturnCondition = lb.ReturnCondition,
+                                };
+
+                    // In kết quả
+                    lv_ReturnBook.ItemsSource = query.ToList();
                 }
-                using (var context = new LibraryManagementContext())
-                {
-                    var data = context.Readers.ToList();
-                    lv_ReturnBook.ItemsSource = data;
-                }
+
+
+
             }
             catch (Exception ex)
             {

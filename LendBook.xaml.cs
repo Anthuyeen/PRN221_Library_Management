@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
+using Project_Library_Management_FA23_BL5.Models;
 
 namespace Project_Library_Management_FA23_BL5
 {
@@ -47,7 +48,8 @@ namespace Project_Library_Management_FA23_BL5
             {
                 using (var context = new LibraryManagementContext())
                 {
-                    var data = context.BookInfos.ToList();
+                    //var data = context.BookInfos.Include(x => x.Books).ToList();
+                    var data = context.Books.Include(x => x.Title).ToList();
                     lv_BookInfo.ItemsSource = data;
                 }
             }
@@ -58,6 +60,7 @@ namespace Project_Library_Management_FA23_BL5
 
         }
         private readonly int _librarianId;
+        private readonly Librarian admin = MainWindow.admin;
 
         private void btn_CreateTicker_Click(object sender, RoutedEventArgs e)
         {
@@ -71,21 +74,43 @@ namespace Project_Library_Management_FA23_BL5
             }
             else
             {
-                Book? bookToLend = BookManager.GetBook(Convert.ToInt32(bookId));
-                if (bookToLend != null)
+                using (var context = new LibraryManagementContext())
                 {
-                    LendBookManager.AddLendBook(new()
+                    LendBookDetail lendBook = new LendBookDetail()
                     {
                         CardNumber = Convert.ToInt32(readerId),
-                        LibrarianId = _librarianId,
+                        LibrarianId = admin.LibrarianId,
                         LendDate = DateTime.Now,
                         ExpectedReturnDate = (DateTime)expect.SelectedDate,
-                        ReturnCondition = bookToLend.Condition
-                    }, bookToLend);
-
+                        ReturnCondition = 1,
+                    };
+                    context.LendBookDetails.Add(lendBook);
+                    context.SaveChanges();
                     MessageBox.Show("Create ticket successfully!");
                     Load();
                 }
+
+
+
+
+
+
+
+                //    Book? bookToLend = BookManager.GetBook(Convert.ToInt32(bookId));
+                //    if (bookToLend != null)
+                //    {
+                //        LendBookManager.AddLendBook(new()
+                //        {
+                //            CardNumber = Convert.ToInt32(readerId),
+                //            LibrarianId = _librarianId,
+                //            LendDate = DateTime.Now,
+                //            ExpectedReturnDate = (DateTime)expect.SelectedDate,
+                //            ReturnCondition = bookToLend.Condition
+                //        }, bookToLend);
+
+                //        MessageBox.Show("Create ticket successfully!");
+                //        Load();
+                //    }
             }
         }
     }

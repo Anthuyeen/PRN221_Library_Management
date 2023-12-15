@@ -21,21 +21,22 @@
         <ListView Margin="413,51,341,0" x:Name="lv_BookInfo">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Title id" Width="100" DisplayMemberBinding="{Binding Path=TitleId}"/>
-                    <GridViewColumn Header="Title" Width="100" DisplayMemberBinding="{Binding Path=Title}"/>
-                    <GridViewColumn Header="Instock" Width="100" DisplayMemberBinding="{Binding Path=InStock}"/>
-                    <GridViewColumn Header="Number of page" Width="100" DisplayMemberBinding="{Binding Path=NumberOfPages}"/>
+                    <GridViewColumn Header="BookId" Width="100" DisplayMemberBinding="{Binding Path=BookId}"/>
+                    <GridViewColumn Header="Title id" Width="100" DisplayMemberBinding="{Binding Path=Title.TitleId}"/>
+                    <GridViewColumn Header="Title" Width="100" DisplayMemberBinding="{Binding Path=Title.Title}"/>
+                    <GridViewColumn Header="Instock" Width="100" DisplayMemberBinding="{Binding Path=Title.InStock}"/>
+                    <GridViewColumn Header="Number of page" Width="100" DisplayMemberBinding="{Binding Path=Title.NumberOfPages}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <WrapPanel Margin="768,0,0,0">
             <StackPanel Height="65" Width="326" Orientation="Horizontal">
                 <Label Content="Book id" Width="85" Height="30"/>
-                <TextBox TextWrapping="Wrap" x:Name="txt_BookId" Width="233" Text="{Binding Path=BookId, Mode=OneWay}" DataContext="{Binding ElementName=listReader, Path=SelectedItem}" Height="29"/>
+                <TextBox TextWrapping="Wrap" x:Name="txt_BookId" Width="233" Text="{Binding Path=BookId, Mode=OneWay}" DataContext="{Binding ElementName=lv_BookInfo, Path=SelectedItem}" Height="29"/>
             </StackPanel>
             <StackPanel Width="326" Height="66" Orientation="Horizontal">
                 <Label Content="Reader id" Width="88" Height="30"/>
-                <TextBox TextWrapping="Wrap" x:Name="txt_ReaderId" Width="228" Text="{Binding Path=CardNumber, Mode=OneWay}" DataContext="{Binding ElementName=listReader, Path=SelectedItem}" Height="34"/>
+                <TextBox TextWrapping="Wrap" x:Name="txt_ReaderId" Width="228" Text="{Binding Path=CardNumber, Mode=OneWay}" DataContext="{Binding ElementName=lv_Reader, Path=SelectedItem}" Height="34"/>
             </StackPanel>
             <StackPanel Width="326" Height="57" Orientation="Horizontal">
                 <Label Content="Expected return book" Width="125" Height="31"/>
