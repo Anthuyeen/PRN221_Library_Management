@@ -156,6 +156,7 @@ namespace Project_Library_Management_FA23_BL5
                         Password = txtBoxPassword.Password,
                         Gmail = txtBoxEmail.Text,
                         LibrarianId = librarian.LibrarianId
+                        
                     };
 
                     if (member == null)

@@ -30,7 +30,7 @@
             <ListView Height="365" Width="1032" x:Name="lv_ReturnBook">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Book Id" Width="60" DisplayMemberBinding="{Binding Path=BookId}"/>
+                        
                         <GridViewColumn Header="Ticket Id" Width="60" DisplayMemberBinding="{Binding Path=ReturnId}"/>
                         <GridViewColumn Header="Rearder card" Width="100" DisplayMemberBinding="{Binding Path=CardNumber}"/>
                         <GridViewColumn Header="Reader name" Width="200" DisplayMemberBinding="{Binding Path=FullName}"/>
