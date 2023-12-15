@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Project_Library_Management_FA23_BL5"
         mc:Ignorable="d"
         Title="BookCreate" Height="450" Width="800">
-    <Grid>
-        <StackPanel>
+    <Grid Background="Beige">
+        <StackPanel >
             <TextBlock Margin="0 10 0 20"  FontWeight="Light" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" >
 Title Control
             </TextBlock>
-            <StackPanel Background="white" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+            <StackPanel Background="Beige" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
                 <Label Content="Id" x:Name="labelId" Visibility="Collapsed" IsEnabled="False" />
                 <TextBox x:Name="txtId" Margin="0 0 0 5" Visibility="Collapsed" IsEnabled="False" />
 

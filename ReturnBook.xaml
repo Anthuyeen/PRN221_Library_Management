@@ -8,13 +8,13 @@
       d:DesignHeight="450"
       Title="ReturnBook" Width="1052">
 
-    <Grid Background="White">
+    <Grid Background="Beige">
         <WrapPanel>
             <StackPanel Height="70" Width="247">
                 <Button Content="Return" Margin="0 13 0 0" Width="133"/>
                 <Button Content="Refresh" Margin="0 8 0 0" Width="133"/>
             </StackPanel>
-            <StackPanel Width="533">
+            <!--<StackPanel Width="533">
                 <StackPanel Height="36" Width="508" Orientation="Horizontal">
                     <RadioButton Content="By reader name" Margin="0 7 0 0"/>
                     <RadioButton Content="By lend ticket ID" Margin="20 7 0 0"/>
@@ -23,7 +23,7 @@
                     <Button Content="Search" Margin="13 0 30 0" Width="89" Height="23"/>
                     <TextBox TextWrapping="Wrap" Width="315" Height="22"/>
                 </StackPanel>
-            </StackPanel>
+            </StackPanel>-->
 
             <ListView Height="365" Width="1032" x:Name="lv_ReturnBook">
                 <ListView.View>

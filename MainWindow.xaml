@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Login" Height="284" Width="514"
         WindowStartupLocation="CenterScreen">
-    <Grid Height="265" VerticalAlignment="Top">
+    <Grid Background="Beige" Height="265" VerticalAlignment="Top">
         <StackPanel Margin="134,66,121,71">
             <Label Content="Username"/>
             <TextBox x:Name="tbAccount"/>

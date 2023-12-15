@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="AdminMemberCreate" Height="500" Width="600"
         Loaded="Window_Loaded">
-    <Grid>
+    <Grid Background="Beige">
         <Label Content="Account Management" HorizontalAlignment="Left" Margin="147,32,0,88" FontSize="30" Foreground="Red"></Label>
-        <StackPanel Background="white" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+        <StackPanel Background="Beige" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
             <Label Content="Id" x:Name="labelId" Visibility="Collapsed" IsEnabled="False"/>
             <TextBox x:Name="txtBoxId" Margin="0 0 0 5" Visibility="Collapsed" IsEnabled="False"/>
             <Label Content="Email"/>

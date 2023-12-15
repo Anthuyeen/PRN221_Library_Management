@@ -22,4 +22,6 @@ public partial class LendBookDetail
     public virtual Librarian Librarian { get; set; } = null!;
 
     public virtual ICollection<Book> Books { get; set; } = new List<Book>();
+
+   
 }

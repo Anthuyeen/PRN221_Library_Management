@@ -35,6 +35,11 @@ namespace Project_Library_Management_FA23_BL5
         List<Author> authors;
         List<AuthorBook> authorBooks;
         List<BookManageModel> bookManageModels;
+        public static Book? GetBook(int bookId)
+        {
+            using var context = new LibraryManagementContext();
+            return context.Books.FirstOrDefault(x => x.BookId == bookId);
+        }
         public void LoadData()
         {
             using var context = new LibraryManagementContext();

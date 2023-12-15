@@ -27,8 +27,9 @@ namespace Project_Library_Management_FA23_BL5
         {
             InitializeComponent();
             CurrentAccount = account;
-            if (CurrentAccount.Role == 0) managerAccount.Visibility = Visibility.Visible;
-            else if(CurrentAccount.Role == 1) managerAccount.Visibility= Visibility.Collapsed;
+            lb_hi.Content = librarian.LibrarianName;
+            if (CurrentAccount.Role == 1) managerAccount.Visibility = Visibility.Visible;
+            else if(CurrentAccount.Role == 0) managerAccount.Visibility= Visibility.Collapsed;
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
@@ -70,6 +71,31 @@ namespace Project_Library_Management_FA23_BL5
         {
             ReturnBook returnBook = new ReturnBook();
             frameHome.Content = returnBook;
+        }
+
+        private void managerAccount_Click_1(object sender, RoutedEventArgs e)
+        {
+            AccountManager accountManager = new AccountManager();
+            frameHome.Content = accountManager;
+        }
+
+        private void namagerReader_Click_1(object sender, RoutedEventArgs e)
+        {
+            ReaderManager readerManager = new ReaderManager();
+            frameHome.Content = readerManager;
+        }
+
+        private void managerReturnBook_Click_1(object sender, RoutedEventArgs e)
+        {
+            ReturnBook returnBook = new ReturnBook();
+            frameHome.Content = returnBook;
+        
+    }
+
+        private void managerLendBook_Click_1(object sender, RoutedEventArgs e)
+        {
+            LendBook lendBook = new LendBook();
+            frameHome.Content = lendBook;
         }
     }
 }

@@ -72,19 +72,33 @@ namespace Project_Library_Management_FA23_BL5
 
         private void Button_Refresh_Click(object sender, RoutedEventArgs e)
         {
-            Load(); 
-            txtOccupation.Text = "";
+            txtOccupation.SelectedValue = default;
             txtCardNumber.Text = "";
             txtFullName.Text = "";
             txtDob.SelectedDate = null;
             txtCcd.SelectedDate = null;
             txtAddress.Text = "";
             txtCardNumber.Text = "";
-            rd_ReaderCard.IsChecked = false;
-            rd_ReaderName.IsChecked = false;
-            txtSearchBox.Text = "";
+           
+            Load();
         }
-       
+
+        private void listReader_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Kiểm tra xem có mục được chọn không
+            if (listReader.SelectedItem != null)
+            {
+                // Truyền dữ liệu từ mục được chọn vào các điều khiển trong form
+                var selectedReader = (Reader)listReader.SelectedItem;
+                txtOccupation.SelectedItem = selectedReader.Occupation;
+                txtCardNumber.Text = selectedReader.CardNumber.ToString();
+                txtFullName.Text = selectedReader.FullName;
+                txtDob.SelectedDate = selectedReader.DateOfBirth;
+                txtCcd.SelectedDate = selectedReader.CardCreationDate;
+                txtAddress.Text = selectedReader.Address;
+            }
+        }
+
         private void btn_Add_Click(object sender, RoutedEventArgs e)
         {
             //try
@@ -109,9 +123,9 @@ namespace Project_Library_Management_FA23_BL5
             string occupation = txtOccupation.SelectedIndex switch
             {
                
-                0 => "Học Viên",
-                1 => "Sinh Viên",
-                2 => "Giáo Viên",
+                0 => "Học viên",
+                1 => "Sinh viên",
+                2 => "Giáo viên",
                 _ => "Error"
             };
 
@@ -215,5 +229,7 @@ namespace Project_Library_Management_FA23_BL5
             using var context = new LibraryManagementContext();
             return context.Readers.ToList();
         }
+
+        
     }
 }

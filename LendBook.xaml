@@ -7,7 +7,7 @@
       mc:Ignorable="d"
       Title="LendBook" Height="439" Width="1104">
 
-    <Grid Background="White">
+    <Grid Background="Beige">
         <ListView Margin="0,0,696,0" x:Name="lv_Reader">
             <ListView.View>
                 <GridView>
@@ -21,15 +21,9 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Title id" Width="100" DisplayMemberBinding="{Binding Path=TitleId}"/>
-                    
-                    <GridViewColumn Header="Book id" Width="100" DisplayMemberBinding="{Binding Path=BookId}"/>
-                    
                     <GridViewColumn Header="Title" Width="100" DisplayMemberBinding="{Binding Path=Title}"/>
-                    <GridViewColumn Header="Author" Width="100" DisplayMemberBinding="{Binding Path=AuthorBooks}"/>
-                    <GridViewColumn Header="Publisher" Width="100" DisplayMemberBinding="{Binding Path=Publisher}"/>
                     <GridViewColumn Header="Instock" Width="100" DisplayMemberBinding="{Binding Path=InStock}"/>
                     <GridViewColumn Header="Number of page" Width="100" DisplayMemberBinding="{Binding Path=NumberOfPages}"/>
-                    <GridViewColumn Header="Condition" Width="100" DisplayMemberBinding="{Binding Path=Condition}"/>
                 </GridView>
             </ListView.View>
         </ListView>
