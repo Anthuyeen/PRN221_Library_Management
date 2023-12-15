@@ -9,14 +9,15 @@
       Title="ReaderManager" Height="453" Width="977">
 
     <Grid Background="Beige">
-        <WrapPanel Margin="0,0,400,0">
+        <Label Margin="167,0,586,403" Content="Reader management" FontSize="15" FontWeight="Bold" Foreground="Red"/>
+        <WrapPanel Margin="0,47,400,0">
             <StackPanel Height="52" Width="267" Orientation="Horizontal">
                 <Label Content="Occupation" Width="106" Height="34"/>
                 <ComboBox Width="151" Height="22" Name="txtOccupation" Text="{Binding Path=Occupation, Mode=OneWay}" DataContext="{Binding ElementName=listReader, Path=SelectedItem}">
                     <ComboBoxItem Content="Học viên" ></ComboBoxItem>
                     <ComboBoxItem Content="Sinh viên" ></ComboBoxItem>
                     <ComboBoxItem Content="Giáo viên" ></ComboBoxItem>
-                   
+
                 </ComboBox>
             </StackPanel>
             <StackPanel Width="234" Orientation="Horizontal">
@@ -45,8 +46,8 @@
                 <Button Content="Edit" Width="100" Margin="10 0" x:Name="btn_Edit" Click="btn_Edit_Click"/>
                 <Button Content="Delete" Width="100" Margin="10 0" x:Name="btn_Delete" Click="btn_Delete_Click"/>
             </StackPanel>
-           
-           
+
+
         </WrapPanel>
         <ListView Margin="516,10,0,10" x:Name="listReader" SelectionChanged="listReader_SelectionChanged">
             <ListView.View>

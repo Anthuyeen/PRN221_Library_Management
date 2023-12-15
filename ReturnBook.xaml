@@ -10,6 +10,8 @@
 
     <Grid Background="Beige">
         <WrapPanel>
+            <Label Content="Return book management" FontSize="15" FontWeight="Bold" Foreground="Red" Width="200"/>
+
             <StackPanel Height="70" Width="247">
                 <Button Content="Return" Margin="0 13 0 0" Width="133"/>
                 <Button Content="Refresh" Margin="0 8 0 0" Width="133"/>
@@ -39,6 +41,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
+
         </WrapPanel>
 
     </Grid>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Library_Management_FA23_BL5"        
         mc:Ignorable="d"
-        Title="Login" Height="284" Width="514"
+        Title="06_LibraryManagement"  Height="284" Width="514"
         WindowStartupLocation="CenterScreen">
     <Grid Background="Beige" Height="265" VerticalAlignment="Top">
         <StackPanel Margin="134,66,121,71">

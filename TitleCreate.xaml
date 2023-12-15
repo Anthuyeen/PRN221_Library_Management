@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Library_Management_FA23_BL5"
         mc:Ignorable="d"
-        Title="TitleCreate" Height="450" Width="800">
+        Title="06_LibraryManagement"  Height="450" Width="800">
     <Grid Background="Beige">
         <StackPanel>
             <TextBlock Margin="0 10 0 20"  FontWeight="Light" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" >
